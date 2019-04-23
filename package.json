@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Glacian22/Custom-Portfolio#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2"
   }
 }

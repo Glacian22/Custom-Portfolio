@@ -16,14 +16,20 @@ $(document).ready(function () {
   var container = $('<div>')
   container.attr('class', 'container')
 
+
+  // i must be multiple of ripple array width
+  var alt = true;
+  var triangle;
   for (var i = 0; i < 1320; i++) {
     var wrapper = $('<div>')
-    var cube = $('<div>')
-    cube.attr('class', 'grad')
+    var tri = $('<div>')
+    alt ? triangle = "tri-up" : triangle = "tri-down";
+    tri.attr('class', triangle + " triangle")
     wrapper.attr('id', i.toString())
     wrapper.attr('class', 'wrapper')
-    wrapper.append(cube)
+    wrapper.append(tri)
     container.append(wrapper)
+    alt = !alt;
   }
 
   $('body').append(container)
@@ -36,16 +42,15 @@ $(document).ready(function () {
 
   function ripple(id) {
     anime({
-      targets: '.container .grad',
+      targets: '.container .triangle',
       scale: [
-        { value: 2.5, easing: 'easeOutSine', duration: 100 },
-        { value: 1, easing: 'easeInOutQuad', duration: 150 },
+        { value: .1, easing: 'easeOutSine', duration: 100 },
+        { value: .7, easing: 'easeInOutQuad', duration: 150 },
         { value: .5, easing: 'easeInOutQuad', duration: 100 },
-        { value: 1.5, easing: 'easeInOutQuad', duration: 150 },
-        { value: .5, easing: 'easeInOutQuad', duration: 130 },
+        { value: 1, easing: 'easeInOutQuad', duration: 150 },
+        { value: .75, easing: 'easeInOutQuad', duration: 130 },
         { value: 1, easing: 'easeInOutQuad', duration: 130 }
       ],
-      color: '#fff',
       delay: anime.stagger(40, { grid: [44, 24], from: id })
     });
   }

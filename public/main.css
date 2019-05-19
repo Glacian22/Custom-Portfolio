@@ -12,24 +12,29 @@
 }
 
 /* Sidebar links */
-.sidebar a {
+.n-link {
   display: block;
   color: #7d857f;
-  padding: 16px;
+  padding: 20px;
   text-decoration: none;
   text-align: right;
 }
 
 /* Active/current link */
-.sidebar a.active {
+#active {
   background-color: #1c2022;
   color: white;
 }
 
+#active img{
+  -webkit-filter: invert(100%) brightness(50%) sepia(100%) saturate(1000%)  hue-rotate(295deg);
+}
+
 /* Links on mouse-over */
-.sidebar a:hover:not(.active) {
+.n-link:hover:not(.active) {
   background-color: rgb(73, 73, 73);
   color: white;
+  text-decoration: none
 }
 
 #side-head {
@@ -39,7 +44,24 @@
 
 #nav-links{
   position: relative;
-  top: 20px
+  top: 20px;
+}
+
+#nav-links img{
+  height: 30px;
+  width: 30px;
+}
+
+.nav-icon{
+  position: fixed;
+  left: 40px;  
+}
+
+
+
+#attribution{
+  position: fixed;
+  bottom: 0px
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */

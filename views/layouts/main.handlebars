@@ -24,7 +24,7 @@
   <!-- The sidebar -->
   <div class="sidebar">
     <div id="side-head">
-      <img id="headshot" src="Me_sepia_sq.jpg">
+      <img id="headshot" src="/images/Me_sepia_sq.jpg">
       <div id="minibio">
         <span id="job-title">Abram Thau</span>
         <br>
@@ -32,9 +32,26 @@
       </div>
     </div>
     <div id="nav-links">
-      <a class="active n-link">About</a>
-      <a href="#portfolio" class="n-link">Portfolio</a>
-      <a href="#contact" class="n-link">Contact</a>
+
+      <a class="n-link" href="#about" onclick="navClick(this)" id="active">
+        <img class="nav-icon" src="/images/user-shape.png">
+        About
+      </a>
+
+      <a class="n-link" href="#portfolio" onclick="navClick(this)">
+        <img class="nav-icon" src="/images/four-black-squares.png">
+        Portfolio
+      </a>
+
+      <a class="n-link" href="#contact" onclick="navClick(this)">
+        <img class="nav-icon" src="/images/comment-black-oval-bubble-shape.png">
+        Contact
+      </a>
+    </div>
+    <div id="attribution">Icons made by <a href="https://www.flaticon.com/<?=_('authors').'/'?>dave-gandy"
+        title="Dave Gandy">Dave
+        Gandy</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
+        href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
     </div>
   </div>
   <div class="container-fluid">

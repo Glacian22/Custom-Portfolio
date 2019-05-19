@@ -32,6 +32,16 @@
   color: white;
 }
 
+#side-head {
+  position: relative;
+  top: 60px
+}
+
+#nav-links{
+  position: relative;
+  top: 20px
+}
+
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
   margin-left: 200px;
@@ -39,8 +49,8 @@ div.content {
   height: 1000px;
 }
 
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 700px) {
+/* On screens that are less than 992px wide */
+@media screen and (max-width: 992px) {
 
   .icon {
     background-color:rgba(255, 255, 255, 0.5);

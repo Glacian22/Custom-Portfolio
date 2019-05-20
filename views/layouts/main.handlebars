@@ -16,8 +16,6 @@
 </head>
 
 <body>
-  {{!-- <div class="hamburger"></div> --}}
-  {{!-- href="javascript:void(0);" --}}
   <div id="menu">
     <i class="icon fa fa-bars"></i>
   </div>
@@ -33,7 +31,12 @@
     </div>
     <div id="nav-links">
 
-      <a class="n-link" href="#about" onclick="navClick(this)" id="active">
+      <a class="n-link" href="#home" onclick="navClick(this)" id="active">
+        <img class="nav-icon" src="/images/home.png">
+        Home
+      </a>
+
+      <a class="n-link" href="#about" onclick="navClick(this)" id="">
         <img class="nav-icon" src="/images/user-shape.png">
         About
       </a>
@@ -44,14 +47,27 @@
       </a>
 
       <a class="n-link" href="#contact" onclick="navClick(this)">
-        <img class="nav-icon" src="/images/comment-black-oval-bubble-shape.png">
+        <img class="nav-icon" src="/images/envelope.png">
         Contact
       </a>
     </div>
-    <div id="attribution">Icons made by <a href="https://www.flaticon.com/<?=_('authors').'/'?>dave-gandy"
-        title="Dave Gandy">Dave
-        Gandy</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
-        href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+
+    <div id="industry-icons">
+      <a href="#linkedin"><img class="ind-icon" src="/images/linkedin-sign.png"></a>
+      <a href="#github"><img class="ind-icon" src="/images/github.png"></a>
+      <a href="#email"><img class="ind-icon" src="/images/envelope.png"></a>
+    </div>
+    <div id="attribution">
+      Icons made by
+      <a href="https://www.flaticon.com/<?=_('authors').'/'?>dave-gandy" title="Dave Gandy">Dave
+        Gandy</a>
+      <br>
+      from
+      <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+      <br>
+      is licensed by
+      <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
+        BY</a>
     </div>
   </div>
   <div class="container-fluid">

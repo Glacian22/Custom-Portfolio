@@ -75,8 +75,16 @@
   margin-top: 80px;
 }
 
-
-#attribution{
+#disclaimer {
+  width: 300px;
+  background-color: rgb(42, 42, 139);
+  color: white;
+  position: relative;
+  left: 700px;
+  top: 300px;
+  padding: 10px;
+}
+#attribution {
   font-size: 12px;
   position: fixed;
   bottom: 0px;

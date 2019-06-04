@@ -20,60 +20,65 @@
     <i class="icon fa fa-bars"></i>
   </div>
   <!-- The sidebar -->
-  <div class="sidebar">
-    <div id="side-head">
-      <img id="headshot" src="assets/images/Me_sepia_sq.jpg">
-      <div id="minibio">
-        <span id="job-title">Abram Thau</span>
+  <div class="container-fluid px-0">
+    <div class="sidebar">
+      <div id="side-head">
+        <img id="headshot" src="assets/images/Me_sepia_sq.jpg">
+        <div id="minibio">
+          <span id="job-title">Abram Thau</span>
+          <br>
+          <span id="desc"> Fullstack Developer</span>
+        </div>
+      </div>
+      <div id="nav-links">
+
+        <a class="n-link" href="#home" onclick="navClick(this)" id="active">
+          <img class="nav-icon" src="assets/images/home.png">
+          Home
+        </a>
+
+        <a class="n-link" href="#about" onclick="navClick(this)" id="">
+          <img class="nav-icon" src="assets/images/user-shape.png">
+          About
+        </a>
+
+        <a class="n-link" href="#portfolio" onclick="navClick(this)">
+          <img class="nav-icon" src="assets/images/four-black-squares.png">
+          Portfolio
+        </a>
+
+        <a class="n-link" href="#contact" onclick="navClick(this)">
+          <img class="nav-icon" src="assets/images/envelope.png">
+          Contact
+        </a>
+      </div>
+
+      <div id="industry-icons">
+        <a href="https://www.linkedin.com/in/abram-thau/"><img class="ind-icon"
+            src="assets/images/linkedin-sign.png"></a>
+        <a href="https://github.com/Glacian22"><img class="ind-icon" src="assets/images/github.png"></a>
+        <a href="mailto:glacian22@gmail.com"><img class="ind-icon" src="assets/images/envelope.png"></a>
+      </div>
+      <div id="attribution">
+        Icons made by
+        <a href="https://www.flaticon.com/<?=_('authors').'/'?>dave-gandy" title="Dave Gandy">Dave
+          Gandy</a>
         <br>
-        <span id="desc"> Fullstack Developer</span>
+        from
+        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        <br>
+        is licensed by
+        <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
+          BY</a>
       </div>
     </div>
-    <div id="nav-links">
-
-      <a class="n-link" href="#home" onclick="navClick(this)" id="active">
-        <img class="nav-icon" src="assets/images/home.png">
-        Home
-      </a>
-
-      <a class="n-link" href="#about" onclick="navClick(this)" id="">
-        <img class="nav-icon" src="assets/images/user-shape.png">
-        About
-      </a>
-
-      <a class="n-link" href="#portfolio" onclick="navClick(this)">
-        <img class="nav-icon" src="assets/images/four-black-squares.png">
-        Portfolio
-      </a>
-
-      <a class="n-link" href="#contact" onclick="navClick(this)">
-        <img class="nav-icon" src="assets/images/envelope.png">
-        Contact
-      </a>
-    </div>
-
-    <div id="industry-icons">
-      <a href="https://www.linkedin.com/in/abram-thau/"><img class="ind-icon" src="assets/images/linkedin-sign.png"></a>
-      <a href="#github"><img class="ind-icon" src="assets/images/github.png"></a>
-      <a href="#email"><img class="ind-icon" src="assets/images/envelope.png"></a>
-    </div>
-    <div id="attribution">
-      Icons made by
-      <a href="https://www.flaticon.com/<?=_('authors').'/'?>dave-gandy" title="Dave Gandy">Dave
-        Gandy</a>
-      <br>
-      from
-      <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-      <br>
-      is licensed by
-      <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
-        BY</a>
+    <div class="container-fluid main">
+      <div id="disclaimer">Full contents coming on June 5th, it'll be spectacular, I promise. In the meantime, please
+        check out my linkedin and github pages, links in the nav panel</div>
     </div>
   </div>
-  <div class="container-fluid">
-    <h1>Full contents coming on June 1st, it'll be spectacular, I promise. In the meantime, please check out my linkedin and github pages, links in the nav panel</h1>
-  </div>
-
+  <!-- TO DO: change the layout so the sidebar is default at large size, with the main content being the rest of the width. At small size sidebar is off to the side and slides on 
+Bootstrap this b-->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

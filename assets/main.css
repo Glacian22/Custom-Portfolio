@@ -6,15 +6,25 @@
   left: 300px;
   top: 0px;
   z-index: -1;
-  background-image: url("images/Vecteezy-16-5160-08\ pinker.jpg");
+  background-image: url("images/Vecteezy-16-5160-0-pinker-darker.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 
-.home {
-  height: 100%
+.subtext {
+  font-size: 24px !important
 }
+
+.home {
+  margin-top: 80px !important;
+  color: white;
+  /* background-color: #2226297c; */
+  font-size: 34px;
+  font-weight: 300;
+  text-align: center
+}
+
 /* The side navigation menu */
 .sidebar {
   /* display: inline-block; */

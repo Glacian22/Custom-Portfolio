@@ -6,8 +6,15 @@
   left: 300px;
   top: 0px;
   z-index: -1;
+  background-image: url("images/Vecteezy-16-5160-08\ pinker.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
+.home {
+  height: 100%
+}
 /* The side navigation menu */
 .sidebar {
   /* display: inline-block; */

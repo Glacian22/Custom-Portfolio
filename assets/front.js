@@ -16,15 +16,27 @@ locationChecker = setInterval(() => {
   console.log(`location: ${loc} newLocation: ${newLocation}`)
   if (loc !== newLocation) {
     console.log(`new location: ${newLocation}`);
-    loc = newLocation;
 
     // switches revealed section
+    $("." + loc).css("transform", "scale(0.1)")
+    $("." + loc).css("opacity", "0")
     $(".cont").css("visibility", "hidden")
-    $("." + loc).css("visibility", "visible")
+
+    let oldLoc = loc;
+    setTimeout(() => {
+      console.log(`oldLoc = ${oldLoc}`)
+      $("." + oldLoc).css("transform", "scale(8.0)")
+    }, 500)
+
+    $("." + newLocation).css("visibility", "visible")
+    $("." + newLocation).css("opacity", "1.0")
+    $("." + newLocation).css("transform", "scale(1.0)")
 
     // clear active link class
     $(".n-link").attr("class", "n-link");
-    $("#" + loc).attr("class", "n-link active")
+    $("#" + newLocation).attr("class", "n-link active")
+
+    loc = newLocation;
   }
 }, 100)
 
@@ -41,12 +53,6 @@ const navClick = (link) => {
   // hides sidebar if nav link is clicked
   if (window.innerWidth <= 992)
     hideNav();
-
-  //   console.log(link)
-  // if (link.id !== "active") {
-  //   $(".n-link").attr("id", "");
-  //   link.id = "active";
-  // }
 }
 
 const showNav = () => {

@@ -16,13 +16,18 @@
   font-size: 24px !important
 }
 
-.home {
-  margin-top: 80px !important;
+.cont {
+  visibility: hidden;
+  position: absolute;
+  margin: 180px;
   color: white;
-  /* background-color: #2226297c; */
   font-size: 34px;
   font-weight: 300;
-  text-align: center
+  text-align: center;
+  transition: .5s;
+}
+
+.home {
 }
 
 /* The side navigation menu */
@@ -49,12 +54,17 @@
 }
 
 /* Active/current link */
-#active {
+.active {
   background-color: #1c2022;
   color: white;
 }
 
-#active img{
+.active:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.active img{
   -webkit-filter: invert(100%) brightness(50%) sepia(100%) saturate(1000%)  hue-rotate(295deg);
 }
 
@@ -138,6 +148,10 @@ div.content {
     position: absolute;
     left: 0px;
     top: 0px
+  }
+
+  .cont {
+    margin: 80px 5px 5px 5px;
   }
 
   .icon {

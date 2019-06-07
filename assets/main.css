@@ -5,7 +5,6 @@
   position: absolute;
   left: 300px;
   top: 0px;
-  z-index: -1;
   background-image: url("images/Vecteezy-16-5160-0-pinker-darker.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -20,15 +19,30 @@
 .cont {
   visibility: hidden;
   position: absolute;
-  margin: 180px;
   color: white;
   font-size: 34px;
   font-weight: 300;
   text-align: center;
-  transition: .5s;
+  transition: .8s;
+  transform: scale(6.0);
+  opacity: 0;
 }
 
 .home {
+  margin: 180px;
+}
+
+.about {
+  margin: 180px;
+}
+
+#next {
+  position: relative;
+  display: block;
+  bottom: 30px;
+  transform: scale(.8);
+  opacity: .3;
+  top: calc(100% - 200px);
 }
 
 /* The side navigation menu */
@@ -153,6 +167,11 @@ div.content {
 
   .cont {
     margin: 80px 5px 5px 5px;
+  }
+
+  #next {
+    top: calc(100% - 100px);
+    transform: scale(.5)
   }
 
   .icon {

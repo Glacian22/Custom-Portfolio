@@ -9,8 +9,7 @@
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  overflow-x: hidden;
-  overflow-y: scroll
+  overflow: auto
 }
 
 .subtext {
@@ -18,14 +17,14 @@
 }
 
 .cont {
-  visibility: hidden;
+  /* display: none; */
   position: absolute;
   color: white;
   font-size: 34px;
   font-weight: 300;
   text-align: center;
   transition: .8s;
-  transform: scale(6.0);
+  transform: scale(1.0);
   opacity: 0;
 }
 
@@ -38,7 +37,7 @@
 }
 
 #next {
-  position: relative;
+  position: sticky;
   display: block;
   bottom: 30px;
   transform: scale(.8);
@@ -59,7 +58,7 @@
   overflow: hidden;
   overflow-x: hidden;
   transition: 0.5s;
-  z-index: 1;
+  z-index: 1
 }
 
 /* Sidebar links */
@@ -105,7 +104,7 @@
 
 #nav-links img{
   height: 30px;
-  width: 30px;
+  width: 35px;
 }
 
 .nav-icon{
@@ -114,12 +113,17 @@
 }
 
 .ind-icon{
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   margin-left: 5px;
   margin-right: 5px;
   display: inline-block;
-  transition: .6s
+  transition: .6s;
+}
+
+.email {
+  height: 45px;
+  width: 45px;
 }
 
 .ind-icon:hover{
@@ -154,6 +158,20 @@ div.content {
   margin-left: 200px;
   padding: 1px 16px;
   height: 1000px;
+}
+
+.card.img {
+  height: 235px;
+  width: 400px;
+}
+
+.card-text {
+  font-size: 20px;
+  color: white;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.103) !important;
 }
 
 /* On screens that are less than 992px wide */
@@ -232,6 +250,20 @@ div.content {
 
 .icon {
   display: none;
+}
+
+#home img {
+  width: 40px;
+  left: 37px
+}
+
+#about img {
+  width: 40px;
+  left: 37px
+}
+
+#contact img {
+  height: 35px
 }
 
 .container-fluid {

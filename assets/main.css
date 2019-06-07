@@ -36,6 +36,10 @@
   margin: 180px;
 }
 
+.portfolio {
+  width: 100%
+}
+
 #next {
   position: sticky;
   display: block;
@@ -223,6 +227,10 @@ div.content {
 
   .sidebar {
     transform: translateX(-300px);
+  }
+
+  .card {
+    width: 90% !important;
   }
 
 }

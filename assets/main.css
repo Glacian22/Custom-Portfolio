@@ -9,7 +9,8 @@
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll
 }
 
 .subtext {
@@ -53,11 +54,12 @@
   padding: 0;
   width: 300px;
   background-color: #222629;
-  /* position: fixed; */
+  position: fixed;
   height: 100%;
   overflow: hidden;
   overflow-x: hidden;
   transition: 0.5s;
+  z-index: 1;
 }
 
 /* Sidebar links */

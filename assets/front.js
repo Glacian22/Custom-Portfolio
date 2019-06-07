@@ -49,9 +49,8 @@ $(document).on("click", ".icon", function (event) {
 
 const nextNav = () => {
  // get the ID of whatever page we're on
- console.log("hi")
- let id = $("." + loc).attr("id");
- id = 1 + id;
+ let id = parseInt($("." + loc).attr("id"));
+ id += 1;
  id > 3 ? id = 0 : null;
  let nextPage = $("#" + id).attr("class").split(" ")[0];
  console.log(`nextPage: ${nextPage}`)
@@ -59,15 +58,6 @@ const nextNav = () => {
  let url = document.location.href.split('#')[0];
  window.location = url + "#" + nextPage;
 }
-
-$("#next").click(function(){
-  console.log("boo")
-})
-
-$(document).on("click", "#next", function(event){
-  console.log("wut")
-  nextNav();
-})
 
 const navClick = (link) => {
   // hides sidebar if nav link is clicked

@@ -9,11 +9,28 @@
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  overflow: auto
+  overflow-y: auto;
+  overflow-x: hidden !important;
+}
+
+h2 {
+  font-size: 80px;
+  font-family: 'Roboto Mono', sans-serif;
+  position: relative;
+  font-weight: 100 
+}
+
+.portfolio h2 {
+  top: 20px
+}
+
+.about h2 {
+  bottom: 60px;
 }
 
 .subtext {
-  font-size: 24px !important
+  font-size: 22px !important;
+  font-weight: 300
 }
 
 .cont {
@@ -108,7 +125,7 @@
 
 #nav-links img{
   height: 30px;
-  width: 35px;
+  width: 30px;
 }
 
 .nav-icon{
@@ -178,6 +195,13 @@ div.content {
   background-color: rgba(255, 255, 255, 0.103) !important;
 }
 
+#dots {
+  position: fixed;
+  opacity: 0;
+  height: 100%;
+  width: 100%
+}
+
 /* On screens that are less than 992px wide */
 @media screen and (max-width: 992px) {
 
@@ -187,11 +211,23 @@ div.content {
     height: 100%;
     position: absolute;
     left: 0px;
-    top: 0px
+    top: 0px;
+  }
+
+  .portfolio {
+    margin: 80px 0px 5px 0px !important;
+  }
+
+  .about h2 {
+    bottom: 20px
+  }
+
+  h2 {
+    font-size: 44px;
   }
 
   .cont {
-    margin: 80px 5px 5px 5px;
+    margin: 100px 25px 5px 25px;
   }
 
   #next {
@@ -260,7 +296,7 @@ div.content {
   display: none;
 }
 
-#home img {
+/* #home img {
   width: 40px;
   left: 37px
 }
@@ -269,10 +305,10 @@ div.content {
   width: 40px;
   left: 37px
 }
-
+*/
 #contact img {
-  height: 35px
-}
+  height: 32px
+} 
 
 .container-fluid {
   background-color: grey;
@@ -282,4 +318,5 @@ div.content {
 html, body {
   height: 100%;
   margin: 0;
+  font-family: 'Ubuntu', sans-serif;
 }

@@ -21,6 +21,10 @@ h2 {
   top: 20px
 }
 
+.contact h2 {
+  top: 0px
+}
+
 .subtext {
   font-size: 22px !important;
   font-weight: 300

@@ -2,10 +2,13 @@ let bSidebar = false;
 let loc = document.location.href.split('#')[1];
 
 $(document).ready(function () {
+  // hide all main content, and reveal only the one we're on
   $(".main").css("overflow", "hidden")
   $(".cont").css("visibility", "hidden")
+  $(".cont").css("display", "none")
   $("." + loc).css("transition", "0s")
   $("." + loc).css("transform", "scale(6.0)")
+  $("." + loc).css("display", "block")
 
   setTimeout(() => {
     $("." + loc).css("visibility", "visible")
@@ -31,13 +34,17 @@ locationChecker = setInterval(() => {
     $("." + loc).css("opacity", "0")
     $(".cont").css("visibility", "hidden")
 
+
     let oldLoc = loc;
 
     $(".main").css("overflow", "hidden")
     $("." + newLocation).css("transition", "0s")
     $("." + newLocation).css("transform", "scale(6.0)")
+    $("." + newLocation).css("display", "block")
 
     setTimeout(() => {
+      $("." + oldLoc).css("display", "none")
+
       $("." + newLocation).css("transition", "0.8s")
       $("." + newLocation).css("visibility", "visible")
       $("." + newLocation).css("opacity", "1.0")

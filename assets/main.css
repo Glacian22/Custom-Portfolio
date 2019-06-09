@@ -36,6 +36,7 @@ h2 {
   font-size: 34px;
   font-weight: 300;
   text-align: center;
+  margin-bottom: 55px;
   transition: .8s;
   transform: scale(.10);
   opacity: 0;
@@ -50,7 +51,8 @@ h2 {
 }
 
 .portfolio {
-  width: 100%
+  width: 100%;
+  margin-bottom: 155px
 }
 
 .contact {
@@ -240,15 +242,15 @@ div.content {
   }
 
   .cont {
-    margin: 20px 25px 5px 25px;
+    margin: 20px 25px 55px 25px;
   }
 
   .portfolio {
-    margin: 0px 0px 5px 0px !important;
+    margin: 0px 0px 55px 0px !important;
   }
 
   .about h2 {
-    bottom: 20px
+    margin-bottom: 20px;
   }
 
   .contact h2 {

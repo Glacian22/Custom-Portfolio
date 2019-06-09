@@ -55,6 +55,14 @@ h2 {
   margin-bottom: 155px
 }
 
+.portfolio a {
+  color: white
+}
+
+.portfolio a:hover{
+  text-decoration: none;
+}
+
 .contact {
   position: relative;
   margin-top: 50px;

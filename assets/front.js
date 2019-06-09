@@ -32,9 +32,8 @@ locationChecker = setInterval(() => {
     // switches revealed section
     $("." + loc).css("transform", "scale(0.1)")
     $("." + loc).css("opacity", "0")
-    $(".cont").css("visibility", "hidden")
 
-
+    // preserves identity of last location for effects on timers
     let oldLoc = loc;
 
     $(".main").css("overflow", "hidden")
@@ -43,14 +42,13 @@ locationChecker = setInterval(() => {
     $("." + newLocation).css("display", "block")
 
     setTimeout(() => {
-      $("." + oldLoc).css("display", "none")
-
       $("." + newLocation).css("transition", "0.8s")
       $("." + newLocation).css("visibility", "visible")
       $("." + newLocation).css("opacity", "1.0")
       $("." + newLocation).css("transform", "scale(1.0)")
       setTimeout(() => {
         $(".main").css("overflow", "auto")
+        $("." + oldLoc).css("display", "none")
       }, 810)
     }, 10)
 

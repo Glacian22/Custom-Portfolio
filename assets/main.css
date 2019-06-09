@@ -1,5 +1,104 @@
+.main {
+  display: inline-block;
+  width: calc(100% - 300px);
+  height: 100%;
+  position: absolute;
+  left: 300px;
+  top: 0px;
+  background-image: url("images/Vecteezy-16-5160-0-pinker-darker.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  overflow-y: auto;
+  overflow-x: hidden !important;
+}
+
+h2 {
+  font-size: 80px;
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 100;
+  position: relative;
+  top: 20px
+}
+
+.subtext {
+  font-size: 22px !important;
+  font-weight: 300
+}
+
+.cont {
+  position: absolute;
+  color: white;
+  font-size: 34px;
+  font-weight: 300;
+  text-align: center;
+  transition: .8s;
+  transform: scale(.10);
+  opacity: 0;
+}
+
+.home {
+  margin: 150px;
+}
+
+.about {
+  margin: 0px 150px 0px 150px;
+}
+
+.portfolio {
+  width: 100%
+}
+
+.contact {
+  position: relative;
+  margin-top: 50px;
+  width: 60%;
+  display: block;
+}
+
+/* form stuff */
+input {
+  width: 49% !important;
+  display: inline-block !important;
+  margin: 0px 0px 10px 0px !important;
+}
+
+#submitbtn {
+  float: left;
+  opacity: .6 !important;
+  background-color: #222629 !important;
+  border: none
+}
+
+#name {
+  float: left
+}
+
+#email {
+  float: right
+}
+
+textarea {
+  width: 100% !important;
+  display: inline-block !important;
+  margin-top: 8px;
+}
+
+/* the button to advance to next area */
+#next {
+  position: sticky;
+  display: block !important;
+  width: 105px;
+  height: 105px;
+  opacity: .3;
+  top: calc(100% - 200px);
+  z-index: 3; 
+  margin: auto !important 
+}
+
 /* The side navigation menu */
 .sidebar {
+  /* display: inline-block; */
   margin: 0;
   padding: 0;
   width: 300px;
@@ -9,6 +108,7 @@
   overflow: hidden;
   overflow-x: hidden;
   transition: 0.5s;
+  z-index: 1
 }
 
 /* Sidebar links */
@@ -21,12 +121,17 @@
 }
 
 /* Active/current link */
-#active {
+.active {
   background-color: #1c2022;
   color: white;
 }
 
-#active img{
+.active:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.active img{
   -webkit-filter: invert(100%) brightness(50%) sepia(100%) saturate(1000%)  hue-rotate(295deg);
 }
 
@@ -58,12 +163,17 @@
 }
 
 .ind-icon{
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   margin-left: 5px;
   margin-right: 5px;
   display: inline-block;
-  transition: .75s
+  transition: .6s;
+}
+
+.email {
+  height: 45px;
+  width: 45px;
 }
 
 .ind-icon:hover{
@@ -100,8 +210,61 @@ div.content {
   height: 1000px;
 }
 
+.card.img {
+  height: 235px;
+  width: 400px;
+}
+
+.card-text {
+  font-size: 20px;
+  color: white;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.103) !important;
+}
+
 /* On screens that are less than 992px wide */
 @media screen and (max-width: 992px) {
+
+  .main {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+  }
+
+  .cont {
+    margin: 20px 25px 5px 25px;
+  }
+
+  .portfolio {
+    margin: 0px 0px 5px 0px !important;
+  }
+
+  .about h2 {
+    bottom: 20px
+  }
+
+  .contact h2 {
+    top: 0px !important
+  }
+
+  .contact {
+    width: 90%;
+    margin: auto;
+    margin-top: 100px
+  }
+
+  h2 {
+    font-size: 44px;
+  }
+
+  #next {
+    top: calc(100% - 100px);
+    transform: scale(.5)
+  }
 
   .icon {
     background-color:rgba(255, 255, 255, 0.5);
@@ -133,6 +296,10 @@ div.content {
     transform: translateX(-300px);
   }
 
+  .card {
+    width: 90% !important;
+  }
+
 }
 
 
@@ -160,6 +327,10 @@ div.content {
   display: none;
 }
 
+#contact img {
+  height: 32px
+} 
+
 .container-fluid {
   background-color: grey;
   height: 100%;
@@ -168,4 +339,5 @@ div.content {
 html, body {
   height: 100%;
   margin: 0;
+  font-family: 'Ubuntu', sans-serif;
 }

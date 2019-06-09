@@ -15,9 +15,40 @@
   <script src="assets/front.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_72t27dwGIo7hWaJtC88HN");
+    })();
+  </script>
+  <script>
+    window.onload = function () {
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        this.contact_number.value = Math.random() * 100000 | 0;
+        emailjs.sendForm('portfolio', 'contact_form', this);
+        this.reset();
+        $('#contactModal').modal('show');
+      });
+    }
+  </script>
 </head>
 
 <body>
+<!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          You message has been sent, thanks!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="menu">
     <i class="icon fa fa-bars"></i>
   </div>
@@ -66,7 +97,6 @@
     </div>
   </div>
   <div class="container-fluid main px-0">
-    <img src="assets/images/BG-black-grid.png" id="dots" >
     <div class="home cont" id="0">
       <p>
         Hi! I'm <b>Abram</b>, a full stack developer, specializing in MongoDB, Express, React, and Node.
@@ -136,8 +166,17 @@
         </div>
       </div>
     </div>
-    <div class="contact cont" id="3">
+    <div class="contact cont mx-auto" id="3">
       <h2>contact</h2>
+      <form id="contact-form">
+        <input type="text" class="form-control" name="name" id="name" placeholder="name">
+        <input type="email" class="form-control" name="email" id="email" placeholder="email">
+        <input type="hidden" name="_gotcha"><!-- use this to prevent spam -->
+        <input type="hidden" name="contact_number">
+        <textarea class="form-control" name="text" id="textarea" rows="5" placeholder="message"></textarea>
+        <br>
+        <button type="submit" class="btn btn-primary" id="submitbtn">Submit</button>
+      </form>
     </div>
     <img src="assets/images/down-arrow.png" id="next" class="mx-auto" onclick="nextNav()">
   </div>

@@ -50,11 +50,11 @@ h2 {
 }
 
 .home {
-  margin: 180px;
+  margin: 50px;
 }
 
 .about {
-  margin: 180px;
+  margin: 50px;
 }
 
 .portfolio {
@@ -63,7 +63,7 @@ h2 {
 
 .contact {
   position: relative;
-  margin-top: 180px;
+  margin-top: 50px;
   width: 60%;
   display: block;
 }
@@ -99,11 +99,12 @@ textarea {
 #next {
   position: sticky;
   display: block !important;
-  transform: scale(.8);
+  width: 105px;
+  height: 105px;
   opacity: .3;
   top: calc(100% - 200px);
   z-index: 3; 
-  /* margin: auto !important  */
+  margin: auto !important 
 }
 
 /* The side navigation menu */
@@ -247,11 +248,11 @@ div.content {
   }
 
   .cont {
-    margin: 100px 25px 5px 25px;
+    margin: 20px 25px 5px 25px;
   }
 
   .portfolio {
-    margin: 80px 0px 5px 0px !important;
+    margin: 0px 0px 5px 0px !important;
   }
 
   .about h2 {

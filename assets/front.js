@@ -28,7 +28,7 @@ $(document).ready(function () {
     setTimeout(() => {
       $(".main").css("overflow", "auto")
     }, 810)
-  }, 10)
+  }, 20)
   $("#" + loc).attr("class", "n-link active")
 });
 

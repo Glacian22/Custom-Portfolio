@@ -133,7 +133,7 @@ textarea {
 .n-link {
   display: block;
   color: #7d857f;
-  padding: 20px;
+  padding: 10px 20px 10px 20px;
   text-decoration: none;
   text-align: right;
 }
@@ -162,7 +162,14 @@ textarea {
 
 #side-head {
   position: relative;
-  top: 60px
+  top: 20px;
+  text-align: center;
+  /* margin-bottom: 10px */
+}
+
+#side-head img {
+  width: 200px;
+  height: 324px;
 }
 
 #nav-links{
@@ -246,6 +253,32 @@ div.content {
 
 /* On screens that are less than 992px wide */
 @media screen and (max-width: 992px) {
+
+  #side-head img {
+    width: 197px;
+    height: 310px;
+    position: absolute;
+    left: 10px;
+    top: 65px;
+    z-index: 3
+  }
+
+  #nav-links {
+    margin-top: 60px
+  }
+
+  #nav-links img{
+    width: 60px;
+    height: 60px
+  }
+
+  .right {
+    display: none
+  }
+
+  .left {
+    width: 60px
+  }
 
   .main {
     display: inline-block;

@@ -3,6 +3,14 @@ let loc = document.location.href.split('#')[1];
 
 $(document).ready(function () {
   // hide all main content, and reveal only the one we're on
+  console.log(`loc: ${loc}`)
+  let url = document.location
+
+  // if loading base domain, redirect to home
+  if (!loc) {
+    window.location = url + "#home"
+  }
+
   $(".main").css("overflow", "hidden")
   $(".cont").css("visibility", "hidden")
   $(".cont").css("display", "none")
@@ -23,7 +31,13 @@ $(document).ready(function () {
 });
 
 sizeChecker = setInterval(() => {
-  if ((window.innerWidth > 992) && !bSidebar) showNav()
+  if ((window.innerWidth > 992) && !bSidebar) {
+    showNav()
+    // fix for arrow on ios
+    if ($(document).width() > 992) {
+      $("#next").css("top", $(document).height() - 100)
+    }
+  }
 }, 250)
 
 locationChecker = setInterval(() => {

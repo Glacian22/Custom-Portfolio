@@ -18,7 +18,8 @@ h2 {
   font-family: 'Roboto Mono', sans-serif;
   font-weight: 100;
   position: relative;
-  top: 20px
+  top: 20px;
+  margin-bottom: 30px
 }
 
 .contact h2 {
@@ -43,7 +44,7 @@ h2 {
 }
 
 .home {
-  margin: 150px;
+  margin: 0px 150px 0px 150px;
 }
 
 .about {
@@ -258,7 +259,7 @@ div.content {
   }
 
   .about h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .contact h2 {
@@ -268,7 +269,7 @@ div.content {
   .contact {
     width: 90%;
     margin: auto;
-    margin-top: 100px
+    margin-top: 50px
   }
 
   h2 {
@@ -276,7 +277,7 @@ div.content {
   }
 
   #next {
-    top: calc(100% - 100px);
+    top: -webkit-calc(100% - 100px);
     transform: scale(.5)
   }
 

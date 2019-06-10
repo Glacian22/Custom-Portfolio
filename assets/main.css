@@ -170,14 +170,21 @@ textarea {
   top: 20px;
 }
 
-#nav-links img{
-  height: 30px;
-  width: 30px;
+.nav-icon{
+  height: 40px;
+  width: 40px;
 }
 
-.nav-icon{
-  position: fixed;
-  left: 40px;  
+.left {
+  width: 130px;
+  text-align: left;
+  margin: 0;
+  display: inline-block
+}
+.right {
+  width: 125px;
+  margin: 0;
+  display: inline-block
 }
 
 .ind-icon{
@@ -187,11 +194,6 @@ textarea {
   margin-right: 5px;
   display: inline-block;
   transition: .6s;
-}
-
-.email {
-  height: 45px;
-  width: 45px;
 }
 
 .ind-icon:hover{
@@ -344,10 +346,6 @@ div.content {
 .icon {
   display: none;
 }
-
-#contact img {
-  height: 32px
-} 
 
 .container-fluid {
   background-color: grey;

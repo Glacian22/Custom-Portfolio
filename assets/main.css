@@ -132,11 +132,7 @@ textarea {
   color: #7d857f;
   padding: 20px;
   text-decoration: none;
-  /* text-align: right; */
-}
 
-span {
-  float: right;
 }
 
 /* Active/current link */
@@ -166,16 +162,34 @@ span {
   top: 60px
 }
 
+ul {
+  padding: 0px
+}
+
 #nav-links{
   position: relative;
   top: 20px;
 }
 
+.nav-align {
+  text-align: right;
+  position: relative;
+  height: 40px
+}
+
 .nav-icon{
   height: 40px;
   width: 40px;
-  /* position: fixed; */
-  /* left: 40px;   */
+  display: block;
+  /* position: static; */
+  left: 0px;
+  margin-right: 0px
+}
+
+.nav-align span{
+  display: inline-block;
+  position: relative;
+  bottom: 36px
 }
 
 .ind-icon{

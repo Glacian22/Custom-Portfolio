@@ -21,6 +21,10 @@ h2 {
   top: 20px
 }
 
+.about h2 {
+  margin-bottom: 30px
+}
+
 .contact h2 {
   top: 0px
 }

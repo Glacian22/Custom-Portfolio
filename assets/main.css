@@ -106,7 +106,7 @@ textarea {
   width: 105px;
   height: 105px;
   opacity: .3;
-  top: calc(100% - 200px);
+  /* top: calc(100% - 200px); */
   z-index: 3; 
   margin: auto !important 
 }
@@ -132,7 +132,11 @@ textarea {
   color: #7d857f;
   padding: 20px;
   text-decoration: none;
-  text-align: right;
+  /* text-align: right; */
+}
+
+span {
+  float: right;
 }
 
 /* Active/current link */
@@ -167,14 +171,11 @@ textarea {
   top: 20px;
 }
 
-#nav-links img{
-  height: 30px;
-  width: 30px;
-}
-
 .nav-icon{
-  position: fixed;
-  left: 40px;  
+  height: 40px;
+  width: 40px;
+  /* position: fixed; */
+  /* left: 40px;   */
 }
 
 .ind-icon{
@@ -184,11 +185,6 @@ textarea {
   margin-right: 5px;
   display: inline-block;
   transition: .6s;
-}
-
-.email {
-  height: 45px;
-  width: 45px;
 }
 
 .ind-icon:hover{
@@ -277,7 +273,7 @@ div.content {
   }
 
   #next {
-    top: -webkit-calc(100% - 100px);
+    /* top: -webkit-calc(100% - 100px); */
     transform: scale(.5)
   }
 
@@ -341,10 +337,6 @@ div.content {
 .icon {
   display: none;
 }
-
-#contact img {
-  height: 32px
-} 
 
 .container-fluid {
   background-color: grey;

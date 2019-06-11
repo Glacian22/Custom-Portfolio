@@ -1,3 +1,7 @@
+#icode {
+  display: none
+}
+
 .main {
   display: inline-block;
   width: calc(100% - 300px);
@@ -22,11 +26,11 @@ h2 {
 }
 
 .about h2 {
-  margin-bottom: 30px
+  margin-bottom: 50px
 }
 
 .contact h2 {
-  top: 0px
+  margin-bottom: 50px
 }
 
 .subtext {
@@ -47,7 +51,11 @@ h2 {
 }
 
 .home {
-  margin: 150px;
+  margin: 100px 150px 150px 150px;
+}
+
+.home h2 {
+  margin-bottom: 50px;
 }
 
 .about {
@@ -164,12 +172,13 @@ textarea {
   position: relative;
   top: 20px;
   text-align: center;
-  margin-bottom: 10px
+  height: 120px;
+  margin-top: 50px;
+  margin-bottom: 100px
 }
 
-#side-head img {
-  width: 200px;
-  height: 324px;
+#head-name {
+  font-size: 28px
 }
 
 #nav-links{
@@ -251,15 +260,65 @@ div.content {
   background-color: rgba(255, 255, 255, 0.103) !important;
 }
 
+#headshot {
+  height: 70px;
+  width: 70px;
+}
+
+#minibio {
+  color: white;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  top: 5px;
+}
+
+#job-title {
+  font-size: 20px;
+}
+
+.icon {
+  display: none;
+}
+
+.container-fluid {
+  background-color: grey;
+  height: 100%;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
 /* On screens that are less than 992px wide */
 @media screen and (max-width: 992px) {
+  
+  #icode {
+    display: inline-block !important
+  }
+
+  #headshot {
+    display: none !important
+  }
+
+  #minibio {
+    display: none !important
+  }
+
+  #side-head {
+    height: auto;
+    margin-top: 0px;
+    margin-bottom: 0px
+  }
 
   #side-head img {
     width: 197px;
     height: 310px;
     position: absolute;
     left: 10px;
-    top: 65px;
+    top: 110px;
     z-index: 3
   }
 
@@ -297,7 +356,7 @@ div.content {
   }
 
   .about h2 {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 
   .contact h2 {
@@ -353,40 +412,4 @@ div.content {
     width: 90% !important;
   }
 
-}
-
-
-#headshot {
-  height: 70px;
-  width: 70px;
-  margin: 30px 0px 50px 20px;
-  display: inline-block;
-}
-
-#minibio {
-  color: white;
-  display: inline-block;
-  text-align: right;
-  margin-left: 55px;
-  position: relative;
-  top: 5px;
-}
-
-#job-title {
-  font-size: 20px;
-}
-
-.icon {
-  display: none;
-}
-
-.container-fluid {
-  background-color: grey;
-  height: 100%;
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-  font-family: 'Ubuntu', sans-serif;
 }

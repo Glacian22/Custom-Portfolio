@@ -17,9 +17,17 @@ $(document).ready(function () {
   $("#" + loc).attr("class", "n-link active")
 });
 
+
 sizeChecker = setInterval(() => {
   if ((window.innerWidth > 992) && !bSidebar) showNav()
 }, 250)
+
+locationChecker = setInterval(() => {
+  const newLocation = document.location.href.split('#')[1];
+  if (loc !== newLocation) {
+  changePage(newLocation)    
+  }
+}, 100)
 
 // shows and hides sidebar when in mobile mode
 $(document).on("click", ".icon", function (event) {
@@ -50,14 +58,18 @@ const navClick = (link) => {
   let newLoc = $(link).attr("id");
 
   if (loc !== newLoc) {
-    $(".cont").css("display", "none");
-    $("." + newLoc).css("display", "block")
-    loc = newLoc;
-
-    $(".n-link").attr("class", "n-link");
-    $("#" + newLoc).attr("class", "n-link active")
-
+    changePage(newLoc);
   }
+}
+
+const changePage = (newPage) => {
+  $(".cont").css("display", "none");
+  $("." + newPage).css("display", "block")
+  loc = newPage;
+
+  $(".n-link").attr("class", "n-link");
+  $("#" + newPage).attr("class", "n-link active")
+
 }
 
 const showNav = () => {
@@ -71,10 +83,3 @@ const hideNav = () => {
   $(".sidebar").css("transform", "translateX(-300px)")
   bSidebar = false;
 }
-
-// onclick for the navlinks
-$(".n-link").click(() => {
-  // console.log(this.id())
-  if (this.id() === "active")
-    null
-})

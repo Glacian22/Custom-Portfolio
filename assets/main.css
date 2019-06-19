@@ -355,9 +355,14 @@ html, body {
     margin: 0px 0px 55px 0px !important;
   }
 
+  .about {
+    margin-top: 0
+  }
+
   .about h2 {
     margin-bottom: 50px;
   }
+
 
   .contact h2 {
     top: 0px !important
@@ -366,7 +371,7 @@ html, body {
   .contact {
     width: 90%;
     margin: auto;
-    margin-top: 100px
+    margin-top: 0px
   }
 
   h2 {

@@ -11,63 +11,14 @@ $(document).ready(function () {
   if (!loc) {
     window.location = url + "#home"
   }
-  // $(".main").css("overflow", "hidden")
-  // $(".cont").css("visibility", "hidden")
-  $(".cont").css("display", "none")
-  // $("." + loc).css("transition", "0s")
-  // $("." + loc).css("transform", "scale(6.0)")
+  // $(".cont").css("display", "none")
   $("." + loc).css("display", "block")
-
-  // setTimeout(() => {
-  //   $("." + loc).css("visibility", "visible")
-  //   $("." + loc).css("opacity", "1.0")
-  //   $("." + loc).css("transition", ".8s")
-  //   $("." + loc).css("transform", "scale(1.0)")
-  //   setTimeout(() => {
-  //     $(".main").css("overflow", "auto")
-  //   }, 810)
-  // }, 20)
-
   $("#" + loc).attr("class", "n-link active")
 });
 
 sizeChecker = setInterval(() => {
   if ((window.innerWidth > 992) && !bSidebar) showNav()
 }, 250)
-
-// locationChecker = setInterval(() => {
-//   const newLocation = document.location.href.split('#')[1];
-// if (loc !== newLocation) {
-//   // switches revealed section
-//   $("." + loc).css("transform", "scale(0.1)")
-//   $("." + loc).css("opacity", "0")
-
-//   // preserves identity of last location for effects on timers
-//   let oldLoc = loc;
-
-//   $(".main").css("overflow", "hidden")
-//   $("." + newLocation).css("transition", "0s")
-//   $("." + newLocation).css("transform", "scale(6.0)")
-//   $("." + newLocation).css("display", "block")
-
-//   setTimeout(() => {
-//     $("." + newLocation).css("transition", "0.8s")
-//     $("." + newLocation).css("visibility", "visible")
-//     $("." + newLocation).css("opacity", "1.0")
-//     $("." + newLocation).css("transform", "scale(1.0)")
-//     setTimeout(() => {
-//       $(".main").css("overflow", "auto")
-//       $("." + oldLoc).css("display", "none")
-//     }, 810)
-//   }, 10)
-
-// clear active link class
-//   $(".n-link").attr("class", "n-link");
-//   $("#" + newLocation).attr("class", "n-link active")
-
-//   loc = newLocation;
-// }
-// }, 100)
 
 // shows and hides sidebar when in mobile mode
 $(document).on("click", ".icon", function (event) {
@@ -93,6 +44,18 @@ const navClick = (link) => {
   // hides sidebar if nav link is clicked
   if (window.innerWidth <= 992) {
     hideNav();
+  }
+
+  let newLoc = $(link).attr("id");
+
+  if (loc !== newLoc) {
+    $(".cont").css("display", "none");
+    $("." + newLoc).css("display", "block")
+    loc = newLoc;
+
+    $(".n-link").attr("class", "n-link");
+    $("#" + newLoc).attr("class", "n-link active")
+
   }
 }
 

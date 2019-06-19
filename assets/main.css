@@ -46,8 +46,8 @@ h2 {
   text-align: center;
   margin-bottom: 55px;
   transition: .8s;
-  transform: scale(.10);
-  opacity: 0;
+  /* transform: scale(.10); */
+  /* opacity: 0; */
 }
 
 .home {
@@ -111,15 +111,22 @@ textarea {
 }
 
 /* the button to advance to next area */
+#next-wrapper {
+  text-align: center;
+  width:  calc(100% - 300px);
+  top: calc(100% - 200px);
+  position: fixed;
+  z-index: 3;
+}
+
 #next {
-  position: sticky;
-  display: block !important;
+  /* position: sticky; */
+  /* display: block !important; */
   width: 105px;
   height: 105px;
   opacity: .3;
-  top: calc(100% - 200px);
-  z-index: 3; 
-  margin: auto !important 
+  /* top: calc(100% - 200px); */
+  /* margin: auto !important  */
 }
 
 /* The side navigation menu */
@@ -347,6 +354,11 @@ html, body {
     top: 0px;
   }
 
+  #next-wrapper {
+    width: 100%;
+    top: calc(100% - 100px);
+  }
+
   .cont {
     margin: 20px 25px 55px 25px;
   }
@@ -379,7 +391,7 @@ html, body {
   }
 
   #next {
-    top: calc(100% - 100px);
+    /* top: calc(100% - 100px); */
     transform: scale(.5)
   }
 

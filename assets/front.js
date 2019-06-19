@@ -9,7 +9,8 @@ $(document).ready(function () {
 
   // if loading base domain, redirect to home
   if (!loc) {
-    window.location = url + "#home"
+    window.location = url + "#home";
+    loc = "home"
   }
   // $(".cont").css("display", "none")
   $("." + loc).css("display", "block")

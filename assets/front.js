@@ -26,7 +26,7 @@ sizeChecker = setInterval(() => {
 locationChecker = setInterval(() => {
   const newLocation = document.location.href.split('#')[1];
   if (loc !== newLocation) {
-  changePage(newLocation)    
+    changePage(newLocation)
   }
 }, 100)
 
@@ -64,7 +64,11 @@ const navClick = (link) => {
 }
 
 const changePage = (newPage) => {
-  // $(".cont").css("display", "none");
+  let oldLoc = loc;
+  setTimeout(() => {
+    $("." + oldLoc).css("display", "none");
+  }, 600)
+  
   $(".cont").css("opacity", "0");
   $("." + newPage).css("display", "block")
   $("." + newPage).css("opacity", "1.0")

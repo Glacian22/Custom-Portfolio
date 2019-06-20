@@ -12,8 +12,9 @@ $(document).ready(function () {
     window.location = url + "#home";
     loc = "home"
   }
-  // $(".cont").css("display", "none")
+  $(".cont").css("display", "none")
   $("." + loc).css("display", "block")
+  $("." + loc).css("opacity", "1")
   $("#" + loc).attr("class", "n-link active")
 });
 
@@ -63,13 +64,14 @@ const navClick = (link) => {
 }
 
 const changePage = (newPage) => {
-  $(".cont").css("display", "none");
+  // $(".cont").css("display", "none");
+  $(".cont").css("opacity", "0");
   $("." + newPage).css("display", "block")
+  $("." + newPage).css("opacity", "1.0")
   loc = newPage;
 
   $(".n-link").attr("class", "n-link");
   $("#" + newPage).attr("class", "n-link active")
-
 }
 
 const showNav = () => {
